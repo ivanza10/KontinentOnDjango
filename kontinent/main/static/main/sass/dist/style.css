@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap");
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Inter;
+  margin: 0;
+  background-color: #FAFAFA;
+  padding: 0;
+}
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 160rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: rgba(89, 176, 57, 0.3);
+  height: 5rem;
+}
+
+.header {
+  display: inline-block;
+  width: 110rem;
+  padding-left: 10rem;
+  vertical-align: middle;
+  padding-top: 0.72rem;
+}
+.header_tel {
+  position: absolute;
+  top: 1.72rem;
+  right: 15rem;
+}
+
+footer {
+  background-color: rgba(89, 176, 57, 0.3);
+  height: 20rem;
+  padding-left: 17rem;
+  padding-top: 5rem;
+}
+
+.list_a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.list_1_li {
+  margin-bottom: 1rem;
+}
+.list_1_li_l {
+  margin-bottom: 0;
+}
+
+.list_2 {
+  padding-left: 6rem;
+}
+
+.footer_list {
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.footer_list_1 {
+  display: flex;
+}
+
+.footer_logo {
+  width: 15rem;
+  height: 5rem;
+}
+
+.footer_text {
+  display: flex;
+}
+.footer_text_p {
+  letter-spacing: 0px;
+  padding-left: 2rem;
+  width: 78rem;
+}
+
+.slider {
+  overflow: hidden;
+  width: 100%;
+  height: 48rem;
+  position: absolute;
+  z-index: -1;
+}
+.slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slider 25s infinite;
+  transform: scale(1.2);
+}
+.slider .slide:nth-child(1) {
+  background-image: url("../photo/chayk-011-darck.jpg");
+  animation-delay: 0s;
+}
+.slider .slide:nth-child(2) {
+  background-image: url("../photo/chayk-009-darck.jpg");
+  animation-delay: -5s;
+}
+.slider .slide:nth-child(3) {
+  background-image: url("../photo/slavn-alleya-005-darck.jpg");
+  animation-delay: -10s;
+}
+.slider .slide:nth-child(4) {
+  background-image: url("../photo/grany-09-dark.jpg");
+  animation-delay: -15s;
+}
+.slider .slide:nth-child(5) {
+  background-image: url("../photo/grani.jpg");
+  animation-delay: -20s;
+}
+
+@keyframes slider {
+  0%, 16%, 100% {
+    opacity: 1;
+    animation-timing-function: ease;
+    z-index: 0;
+  }
+  20% {
+    opacity: 0;
+    animation-timing-function: step-end;
+    z-index: 0;
+  }
+  96% {
+    opacity: 1;
+    animation-timing-function: step-end;
+    z-index: -1;
+  }
+}
+.nav_panel {
+  float: right;
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 2rem;
+  left: -3.125rem;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: #FFFFFF;
+}
+
+#menuToggle input {
+  display: block;
+  width: 2.5rem;
+  height: 2rem;
+  position: absolute;
+  top: -0.44rem;
+  left: -0.31rem;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span {
+  display: block;
+  width: 2.01rem;
+  height: 0.25rem;
+  margin-bottom: 0.31rem;
+  position: relative;
+  background: #000000;
+  border-radius: 0.187rem;
+  z-index: 1;
+  transform-origin: 0.25rem 0;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: fixed;
+  width: 18.75rem;
+  height: 100vh;
+  margin: -6.3125rem 0 0 -19.6875rem;
+  padding: 3.125rem;
+  padding-top: 20rem;
+  background: rgba(89, 176, 57, 0.5);
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  margin-bottom: 2rem;
+  font-size: 1.375rem;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+h1 {
+  color: #000000;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.3125rem;
+  text-alingh: center;
+}
+
+h2 {
+  color: #000000;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+}
+
+a {
+  color: #000;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+
+h3 {
+  color: #000;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+h4 {
+  color: #000;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+p {
+  color: #000;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+h5 {
+  color: #000;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main {
+  height: 48rem;
+  width: 100vw;
+}
+
+.slider_text {
+  padding-top: 20rem;
+  padding-left: 10rem;
+  color: #FAFAFA;
+}
+.slider_text_h {
+  color: #FAFAFA;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+.slider_text_p {
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  color: #FAFAFA;
+}
+.slider_text_btn {
+  width: 17.5rem;
+  height: 3.75rem;
+  border-radius: 10px;
+  background: #59B039;
+  border: none;
+  transition: transform 2s;
+}
+.slider_text_btn_text {
+  color: #FAFAFA;
+}
+.slider_text_btn:hover {
+  background: rgba(89, 176, 57, 0.8);
+  transition: transform 2s;
+}
+
+.section_2 {
+  height: 32rem;
+}
+.section_2_text {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.cards {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 27.5rem 27.5rem 27.5rem;
+  grid-template-rows: 22rem;
+  justify-content: center;
+  column-gap: 4.5rem;
+}
+
+.card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.6rem;
+  transition: transform 2s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card_text {
+  margin-bottom: 1rem;
+}
+.card_text_p {
+  font-size: 1rem;
+}
+.card_text_span {
+  font-size: 1rem;
+  float: right;
+}
+
+.section_3 {
+  height: 55rem;
+  margin-bottom: 3rem;
+}
+.section_3_text {
+  padding-top: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section_b {
+  display: grid;
+  grid-template-columns: 45rem 45rem;
+  grid-template-rows: 22rem 22rem;
+  justify-content: center;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.section_buy {
+  position: relative;
+  background-color: rgba(89, 176, 57, 0.3);
+  padding-left: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.section_buy_text {
+  padding-top: 4rem;
+  margin-bottom: 2.5rem;
+}
+.section_buy_text_p {
+  margin-bottom: 3rem;
+}
+.section_buy_text_img {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+}
+.section_buy_text_img_3 {
+  top: 5rem;
+}
+.section_buy_text_img_4 {
+  top: 3rem;
+}
+.section_buy_text_btn {
+  color: #FAFAFA;
+  border-radius: 10px;
+  background: #59B039;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  width: 10rem;
+  height: 3.2rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.section_4 {
+  height: 40rem;
+  width: 92rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 45rem 45rem;
+  grid-template-rows: 32rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.actions_text {
+  margin-bottom: 2rem;
+}
+.actions_text_h1 {
+  margin-bottom: 5rem;
+  font-size: 2.3rem;
+}
+.actions_text_h2 {
+  margin-bottom: 5rem;
+  font-size: 2rem;
+}
+.actions_text_s {
+  float: right;
+  padding-right: 5rem;
+}
+.actions_card {
+  padding-top: 5rem;
+  height: 22rem;
+  position: relative;
+  background-color: rgba(89, 176, 57, 0.3);
+  padding-left: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.slider_mini {
+  width: 45rem;
+  height: 27rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+}

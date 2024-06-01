@@ -1,0 +1,17 @@
+header {
+  background-color: rgba(89, 176, 57, 0.3);
+  height: 5rem;
+}
+
+.header {
+  display: inline-block;
+  width: 110rem;
+  padding-left: 10rem;
+  vertical-align: middle;
+  padding-top: 0.72rem;
+}
+.header_tel {
+  position: absolute;
+  top: 1.72rem;
+  right: 15rem;
+}

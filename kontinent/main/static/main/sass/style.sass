@@ -1,0 +1,244 @@
+@import 'mix/mix'
+
+main
+    height: 48rem
+    width: 100vw
+
+.slider_text
+    width: 50rem
+    padding-top: 20rem
+    padding-left: 19rem
+    color: $white
+    &_h
+
+        color: $white
+        margin-bottom: 2rem
+        font-size: 3rem
+
+    &_p
+
+        margin-bottom: 2rem
+        font-size: 1.3rem
+        color: $white
+
+    &_btn
+
+        width: 17.5rem
+        height: 3.75rem
+        border-radius: 0.625rem
+        background: $green
+        border: none
+        transition: transform 2s
+        &_text
+            color: $white
+        &:hover
+            background: rgba(89, 176, 57, 0.80)
+            transition: transform 2s
+.section_2
+    height: 32rem
+    &_text
+        padding-top: 2rem
+        text-align: center
+.cards
+    padding-top: 2rem
+    display: grid
+    grid-template-columns: 27.5rem 27.5rem 27.5rem
+    grid-template-rows: 22rem
+    justify-content: center
+    column-gap: 4.5rem
+.card
+    position: relative
+    background-size: cover
+    background-position: center
+    border-radius: 1.6rem
+    transition: transform 2s
+    &:hover
+        transform: scale(1.05)
+    &_text
+        margin-bottom: 1rem
+        &_p
+            font-size: 1rem
+        &_span
+            font-size: 1rem
+            float: right
+    &_img
+        border-radius: 1.6rem
+        width: 27.5rem
+        height: 16.875rem
+        overflow: hidden
+        margin-bottom: 0.5rem
+.section_3
+    height: 55rem
+    margin-bottom: 3rem
+    &_text
+        padding-top: 2rem
+        text-align: center
+        margin-bottom: 2rem
+.section_b
+    display: grid
+    grid-template-columns: 45rem 45rem
+    grid-template-rows: 22rem 22rem
+    justify-content: center
+    column-gap: 2rem
+    row-gap: 2rem
+    &uy
+        position: relative
+        background-color: rgba(89, 176, 57, 0.30)
+        padding-left: 2rem
+        border-radius: 0.9375rem
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
+        &_text
+            padding-top: 4rem
+            margin-bottom: 2.5rem
+            &_a
+            &_p
+                margin-bottom: 3rem
+            &_img
+                position: absolute
+                top: 4rem
+                right: 2rem
+                width: 13.75rem
+                height: 13.125rem
+                &_3
+                    top: 5rem
+                    width: 14.5625rem
+                    height: 10.875rem
+                &_4
+                    top: 3rem
+            &_btn
+                color: $white
+                border-radius: 0.625rem
+                background: #59B039
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+                border: none
+                width: 10rem
+                height: 3.2rem
+                flex-shrink: 0
+                cursor: pointer
+
+                &:hover
+                    background: rgba(89, 176, 57, 0.60)
+                    color: #777
+
+.section_4
+    height: 40rem
+    width: 92rem
+    margin: 0 auto
+    display: grid
+    grid-template-columns: 45rem 45rem
+    grid-template-rows: 32rem
+    column-gap: 2rem
+    row-gap: 2rem
+.actions
+    &_text
+        margin-bottom: 2rem
+        &_h1
+            margin-bottom: 5rem
+            font-size: 2.3rem
+        &_h2
+            margin-bottom: 5rem
+            font-size: 2rem
+        &_p
+
+        &_s
+            float: right
+            padding-right: 5rem
+    &_card
+        padding-top: 5rem
+        height: 22rem
+        position: relative
+        background-color: rgba(89, 176, 57, 0.30)
+        padding-left: 2rem
+        border-radius: 0.9375rem
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20)
+.slider_mini
+    width: 45rem
+    height: 27rem
+    border-radius: 0.9375rem
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20)
+.link
+    position: relative
+    display: flex
+    justify-content: center
+    height: 40rem
+    margin-bottom: 5rem
+    &_img
+        width: 8.8125rem
+        height: 11.875rem
+        position: absolute
+        top: -7.5rem
+        right: 80rem
+
+@media (max-width: 1920px)
+    html
+        font-size: 14px
+
+@media (max-width: 1500px)
+    html
+        font-size: 12px
+    .link_img
+        top: -7.5rem
+        right: 75rem
+    footer
+        padding-left: 14rem
+        
+
+@media (max-width: 1250px)
+    html
+        font-size: 11px
+
+@media (max-width: 1024px)
+    html
+        font-size: 10px
+    footer
+        padding-left: 5rem
+
+@media (max-width: 768px)
+    html
+        font-size: 8px
+    .section_2
+        height: 55rem
+    .cards
+        padding-top: 2rem
+        display: grid
+        grid-template-columns: 27.5rem 27.5rem
+        grid-template-rows: 22rem 22rem
+        justify-content: center
+        column-gap: 4.5rem
+        row-gap: 2rem
+    footer
+        padding-left: 3rem
+
+@media (max-width: 500px)
+    html
+        font-size: 5px
+    .section_3
+        height: 105rem
+        margin-bottom: 3rem
+    .section_b
+        display: grid
+        grid-template-columns: 64rem
+        grid-template-rows: 22rem 22rem 22rem 22rem
+        justify-content: center
+        column-gap: 2rem
+        row-gap: 2rem
+    footer
+        padding-left: 3rem
+    .section_4
+        height: 77rem
+        width: 80rem
+        margin: 0 auto
+        display: grid
+        grid-template-columns: 45rem
+        grid-template-rows: 32rem 32rem
+        column-gap: 2rem
+        row-gap: 2rem
+        justify-content: center
+
+@media (max-width: 321px)
+    html
+        font-size: 4px
+    .content
+        width: 65rem
+    .link_img
+        right: 50rem
